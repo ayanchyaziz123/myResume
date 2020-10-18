@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<main class="page hire-me-page">
+        <section class="portfolio-block hire-me">
+            <div class="container">
+                <div class="heading">
+                    <h2>Contact Me</h2>
+                </div>
+                <form>
+                    <div class="form-group"><label for="subject">Name</label><input class="form-control" type="text" id="email"></div>
+                    <div
+                        class="form-group"><label for="email">Email</label><input class="form-control" type="email" id="email"></div>
+            <div class="form-group"><label for="message">Message</label><textarea class="form-control" id="message"></textarea></div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6 button"><button class="btn btn-primary btn-block" type="submit">send</button></div>
+                </div>
+            </div>
+            </form>
+            </div>
+        </section>
+    </main>
+{% endblock body %}

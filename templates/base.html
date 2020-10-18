@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Home - Brand</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'https://fonts.googleapis.com/css?family=Lato:300,400,700' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/fonts/ionicons.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css' %}"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-dark navbar-expand-lg fixed-top portfolio-navbar p-2"
+      style="background: #4682b4"
+    >
+      <div class="container">
+        <a class="navbar-brand logo" href="#">Ayan</a
+        ><button
+          data-toggle="collapse"
+          class="navbar-toggler"
+          data-target="#navbarNav"
+        >
+          <span class="sr-only">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="{% url 'project' %}">Projects</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="{% url 'cv' %}">CV</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" href="{% url 'hireMe' %}">Hire me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid pb-2 mb-0 text-center">
+      <div class="container">
+      <div class="row">
+      <div class="col-4">
+      </div>
+      <div class="col-4">
+      <h3 class="display-5 pt-2">Azizur Rahman</h3>
+        <p class="lead">Push yourself, because no one else is going to do it for you.</p>
+        <hr />
+        <p class="lead">
+          <a
+            class="btn btn-primary btn-lg"
+            href="{% url 'hireMe' %}"
+            role="button"
+            >Hire Me</a
+          >
+        </p>
+      </div>
+      <div class="col-4">
+      </div>
+      </div>
+        
+      </div>
+    </div>
+    {% block body %} {% endblock body %}
+
+    <footer class="page-footer" style="background: #fff">
+      <div class="container">
+        <div class="links text-white">
+          <a href="{% url 'cv' %}" class="text-dark">About me</a
+          ><a href="{% url 'contactMe' %}" class="text-dark">Contact me</a
+          ><a href="{% url 'project' %}" class="text-dark">Projects</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="text-dark"
+            ><i class="icon ion-social-facebook"></i></a
+          ><a href="#" class="text-dark"
+            ><i class="icon ion-social-instagram-outline"></i></a
+          ><a href="#" class="text-dark"
+            ><i class="icon ion-social-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+  </body>
+</html>
