@@ -25,7 +25,7 @@ SECRET_KEY = '9f*zzn1_wn5#x9fm^4nl&dpawenxeb(r#flrysb(kvtr8*460)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ayansresume..herokuapp.com']
 
 
 # Application definition
@@ -130,3 +130,5 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+#  Add configuration for static files storage using whitenoise
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
