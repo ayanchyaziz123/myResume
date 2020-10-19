@@ -26,3 +26,12 @@ class Project(models.Model):
             img.thumbnail(output_size)
             img.save(self.project_image.path)
 
+class Subject(models.Model):
+    subject = models.CharField(max_length=200, primary_key=True)
+class HireMe(models.Model):
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    Id = models.AutoField(primary_key=True, auto_created=True)
+    email = models.EmailField(max_length=200)
+    message = models.CharField(max_length=1000)
+    date = models.DateField()
+    form_filupDate = models.DateTimeField(auto_now_add=True, auto_now=False, blank=True)

@@ -18,7 +18,12 @@ def cv(request):
 def hireMe(request):
     return render(request, 'hireMe.html')
 def contactMe(request):
-    return render(request, 'contactMe.html')    
+    return render(request, 'contactMe.html')   
+def fullProject(request, slug):
+    project = Project.objects.filter(projectId=slug).first()
+    context = {'project': project,}
+    return render(request, 'fullProject.html', context)
+
 
             
                

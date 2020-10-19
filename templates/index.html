@@ -29,7 +29,7 @@
           {% for project in project %}
 
           <div class="col-md-6 col-lg-4 item zoom-on-hover">
-              <a href="#"
+              <a href="{% url 'fullProject' project.projectId %}"
                 ><img
                   class="img-fluid image"
                   src="{{project.project_image.url}}"

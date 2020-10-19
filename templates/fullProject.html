@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block body %}
+
+<p>{{project.project_title}}</p>
+
+<iframe
+  width="420"
+  height="345"
+  src="{{project.project_youtubeUrl}}"
+>
+</iframe>
+
+{% endblock body %}
